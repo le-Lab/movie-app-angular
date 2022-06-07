@@ -1,0 +1,23 @@
+<pre>{{ items | json }}</pre>
+<div class="slider">
+  <div class="slide" *ngFor="let item of items">
+    <div class="slide-bg">
+      <img
+        [src]="'https://image.tmdb.org/t/p/original/'+ item.poster_path"
+        alt=""
+      />
+    </div>
+    <div class="slide-pane">
+      <h2 class="name">{{ item.original_title }}</h2>
+      <div class="meta">
+        <div class="info">
+          <span class="rating">
+            <span>star</span><span class="rating-value">7</span>
+          </span>
+          <span>400 reviews</span>
+          <span>2022</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
